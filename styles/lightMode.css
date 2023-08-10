@@ -1,0 +1,453 @@
+/*
+    Responsive Font
+    35px : font-size: clamp(20px, 2.3vw, 55px);
+    14px : font-size: clamp(10px, 1.1vw, 34px);
+    16px : font-size: clamp(8px, 1vw, 26px);
+*/
+
+*{
+    font-family: 'Signika Negative', sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:#d8d8d8;
+    overflow: hidden;
+}
+
+.containerAll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#d8d8d8;
+}
+
+.containerView{
+    max-width: 1480px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#d8d8d8;
+}
+
+
+.content{
+    text-align: center;
+    width: 70%;
+    height: 85%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 5px;
+    position: absolute;
+    top: 12%;
+    border: 1px solid #0c0c0c;
+    box-shadow: 0px 0px 10px rgba(20, 22, 22, .3);
+}
+
+.contentNav{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: fit-content;
+    padding: .5%;
+    display: flex;
+    background-color: #ffffff;
+    z-index: 5;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modeTheme{
+    border: 1px solid red;
+    width: 5%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5%;
+    border-radius: 3px;
+    border: 1px solid #0c0c0c;
+    cursor: pointer;
+}
+
+.modeTheme:hover{
+    background-color: rgb(12, 12, 12, .2);
+}
+
+.spawnMode{
+    position: absolute;
+    top: 10%;
+    right: 22.5%;
+    background-color: #CCCCCC;
+    border-radius: 3px;
+    z-index: 5;
+    padding: 1%;
+    width: 10%;
+    height: fit-content;
+    opacity: 0;
+    display: none;
+    transition: opacity .1s linear;
+    border: 1px solid #0c0c0c;
+}
+
+.listTheme{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listTheme li{
+    padding: 5% .5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255, .8);
+    color: #0c0c0c;
+    gap: 10px;
+    font-size: clamp(8px, 1vw, 26px);
+    cursor: pointer;
+}
+
+.listTheme li span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.listTheme li:hover{
+    background-color: rgb(255, 255, 255, .4);
+}
+
+
+.modeTheme span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c0c0c;
+    font-size: clamp(8px, 1.1vw, 26px);
+    font-weight: lighter;
+}
+
+.logoNav{
+    width: 3%;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logoNav img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.contentInfo{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0% 3%;
+    gap: 60px;
+    background-image: url(../img/use/wallpaperbetter.com_3840x2160.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contentInfo h1{
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-weight: bolder;
+    font-size: clamp(20px, 2.8vw, 55px);
+}
+
+.designers{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.designers h3{
+    color: #fafafa;
+    font-weight: bolder;
+    font-size: clamp(11px, 1.4vw, 26px);
+    position: relative;
+    width: fit-content;
+}
+
+.designers span{
+    background: linear-gradient(to right, #ff9900, #e100ff);
+    -webkit-background-clip: text; /* Propiedad específica para Webkit (Safari y Chrome) */
+    color: transparent;
+    margin: .2% 0 0 0;
+    font-size: clamp(10px, 1.3vw, 26px);
+    position: relative;
+}
+
+/* .designers h4::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 0;
+    height: 100%;
+    background-image: url(./img/use/wallpaperbetter.com_3840x2160.jpg);
+    border-left: 1.5px solid tomato;
+    animation: animate 4s steps(16) alternate infinite;
+
+}
+
+@keyframes animate {
+    0%{
+        width: 100%;
+    }40%,80%{
+        width: 0%;
+    }100%{
+        width: 100%;
+    }
+} */
+
+.contentLog{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #ffffff;
+}
+
+.contentText{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contentText h1{
+    color: #000;
+    font-size: clamp(20px, 2.3vw, 55px);
+    font-weight: bolder;
+}
+
+.contentText h4{
+    color: #0c0c0c;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: clamp(8px, 1vw, 26px);
+}
+
+.contentOthers {
+    display: flex;
+    gap: 5px;
+    padding: 1%;
+    width: 80%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentOthers div{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right, #ff8c00, #ff00c8);
+    padding: 1.4% .5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contentOthers div span{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #0c0c0c;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: clamp(6px, 1vw, 26px);
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 3px;
+    padding: 2.1% 1%;
+}
+
+
+  
+
+.contentOthers span *{
+    cursor: pointer;
+}
+
+.contentOthers span:hover{
+    background:linear-gradient(to right, #ff8c00, #ff00c8);
+} 
+
+.contentOr{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -.5% 0 0% 0;
+}
+
+.contentOr h3{
+    color: #0c0c0c;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: clamp(9px, 1.2vw, 26px);
+}
+
+.contentInputs{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contentInputs input{
+    background-color: #CCCCCC;
+    border: 1px solid transparent;
+    padding: 3% 0 3% 3%;
+    outline: none;
+    color: #0c0c0c;
+    font-size: clamp(10px, 1.1vw, 34px);
+    border-radius: 3px;
+    transition: all .3s ease;
+}  
+
+.contentInputs input:focus{
+    border: 1px solid rgb(12, 12, 12, 1);
+}
+
+.contentQuest{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recordarPass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.recordarPass input{
+    width: clamp(15px, 2vw, 20px);
+    height: clamp(15px, 2vw, 20px);
+    background-color: #CCCCCC;
+    appearance: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.recordarPass input:checked{
+    background-image: url(../img/logo/logo_small_icon_only_inverted.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recordarPass label{
+    color: #0c0c0c;
+    font-size: clamp(10px, 1.1vw, 34px);
+    font-weight: lighter;
+}
+
+.olvidoPass{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.olvidoPass label{
+    color: #0c0c0c;
+    font-size: clamp(10px, 1.1vw, 34px);
+    cursor: pointer;
+}
+
+.submitLog{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitLog input{
+    width: 100%;
+    height: 100%;
+    padding: 4% 1%;
+    border: none;
+    background:linear-gradient(to right, #ff8c00, #ff00c8);
+    border-radius: 3px;
+    font-size: clamp(8px, 1.1vw, 26px);
+    font-weight: lighter;
+    color: #0c0c0c;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.submitLog input:hover{
+    transform: scale(.98);
+}
+
+.contentRegister{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentRegister h4{
+    color: #0c0c0c;
+    cursor: pointer;
+    font-size: clamp(8px, 1vw, 26px);
+}
